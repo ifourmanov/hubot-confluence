@@ -16,8 +16,8 @@ noResultsFound = [
 
 sanity_check_args = (msg) ->
   required_args = [
-    "HUBOT_CONFLUENCE_USER"
-    "HUBOT_CONFLUENCE_PASSWORD"
+#   "HUBOT_CONFLUENCE_USER"
+#    "HUBOT_CONFLUENCE_PASSWORD"
     "HUBOT_CONFLUENCE_HOST"
     "HUBOT_CONFLUENCE_PORT"
     "HUBOT_CONFLUENCE_SEARCH_SPACE"
@@ -84,14 +84,14 @@ search = (msg, query, text) ->
 
 make_headers = ->
 
-  user = nconf.get("HUBOT_CONFLUENCE_USER")
-  password = nconf.get("HUBOT_CONFLUENCE_PASSWORD")
+#  user = nconf.get("HUBOT_CONFLUENCE_USER")
+#  password = nconf.get("HUBOT_CONFLUENCE_PASSWORD")
 
-  auth = btoa("#{user}:#{password}")
+#  auth = btoa("#{user}:#{password}")
 
   ret =
     Accept: "application/json"
-    Authorization: "Basic #{auth}"
+#    Authorization: "Basic #{auth}"
 
 clean_search = (query) ->
   query = query.replace(/[!?,.]/g, ' ')
